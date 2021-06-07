@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CartIcon from './Cart/Cart'
 
 const NavBar = () => {
     return (
@@ -27,13 +27,14 @@ const NavBar = () => {
                                 </ul>
                             </li>
                         </ul>
-                        <form>
-                            <input className="form-control" type="text" placeholder="Search" aria-label="Search"/>
-                        </form>
+                        
+                        <CartIcon />
+
                     </div>
                 </div>
             </nav>
         </div>
+        
     )
 }
 
