@@ -1,14 +1,14 @@
 import React from 'react'
 
 
-import NavBar from './components/NavBar'
-import Home from './components/Layout/Home/Home'
+import NavBar from './components/Layout/NavBar/NavBar'
+import Index from './components/Layout/Index/Index'
 
 function App() {
   return (
     <div>
       <NavBar />  
-      <Home />  
+      <Index />  
 
     </div>
   );

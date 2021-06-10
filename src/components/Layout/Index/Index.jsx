@@ -1,18 +1,12 @@
 import React from 'react'
-import './Home.css'
-import ItemCount from '../../Activitys/ItemCount/ItemCount'
-const Home = () => {
+import './Index.css'
+import Header from './Header'
+import ItemCount from '../ItemCount/ItemCount'
+const Index = () => {
     return (
         <main>
 
-          <section className="py-5 text-center container">
-            <div className="row py-lg-5">
-              <div className="col-lg-6 col-md-8 mx-auto">
-                <h1 className="fw-light">Bienvenido a un Universo Paralelo</h1>
-                <p className="lead text-muted">Esto es un bello texto</p>
-              </div>
-            </div>
-          </section>
+          <Header />
 
           <div className="album py-5 bg-light">
             <div className="container">
@@ -39,4 +33,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Index

@@ -1,5 +1,5 @@
 import React from 'react'
-import CartIcon from './Cart/Cart'
+import CartIcon from '../Cart/Cart'
 
 const NavBar = () => {
     return (
