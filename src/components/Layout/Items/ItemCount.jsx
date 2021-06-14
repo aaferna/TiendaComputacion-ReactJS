@@ -9,7 +9,7 @@ const ItemCount = (articulo) => {
     }
     return (
 
-        <div className="input-group mb-3">
+        <div className="input-group mb-3" key={articulo.productID}>
             <span className="input-group-text btn btn-outline-secondary" onClick={
                 () => {
                     if (cant == 0){} else {
@@ -20,19 +20,20 @@ const ItemCount = (articulo) => {
             >-</span>
             <input type="text" className="form-control" aria-label="Amount (to the nearest dollar)" 
             name={articulo.productID}
-            value={cant}/>
+            value={cant} readOnly/>
             <span className="input-group-text btn btn-outline-secondary"
             onClick={
                 () => {
-                    if (articulo.cantidad == cant){} else {
+                    if (articulo.cantidad != cant){
                         setCant(cant + 1)
                     }
                 }
             }
             >+</span>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+            <button className="btn btn-outline-secondary" type="button" id="button-addon2"
             onClick={
                 () => {
+                    
                     if (cant > 0){
                         onAdd(cant)
                     } else {
