@@ -1,6 +1,7 @@
 import React from 'react'
+import ItemCount from './ItemCount'
 
-const Item = () => {
+const Item = ({item}) => {
     return (
         <div className="col" key={item.id}>
             <div className="card shadow-sm">
