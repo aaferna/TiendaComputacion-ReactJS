@@ -30,7 +30,7 @@ const ItemCount = (articulo) => {
                 }
             }
             >+</span>
-            <button className="btn btn-outline-secondary" type="button" id="button-addon2"
+            <button className="btn btn-success" type="button" id="button-addon2"
             onClick={
                 () => {
                     
@@ -41,7 +41,7 @@ const ItemCount = (articulo) => {
                     }
                 }
             }
-            >Sumar</button>
+            >Agregar al Carrito</button>
 
         </div>
         

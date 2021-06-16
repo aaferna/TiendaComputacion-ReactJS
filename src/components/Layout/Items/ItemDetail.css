@@ -1,0 +1,11 @@
+
+.card-img-topv2{
+    width: 40% ;
+    display:block;
+    margin:auto;
+}
+
+.card-img-topv2 {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
