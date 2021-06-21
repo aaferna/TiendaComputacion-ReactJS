@@ -1,6 +1,6 @@
 import React from 'react'
 import CartIcon from '../Cart/Cart'
-
+import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
         <div>
@@ -13,7 +13,9 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarsExample07XL">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+                                <Link to="/" className="nav-link active" aria-current="page">
+                                    Inicio
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" aria-current="page" href="#">Ultimos Ingresos</a>
@@ -21,9 +23,16 @@ const NavBar = () => {
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
                                 <ul className="dropdown-menu" aria-labelledby="dropdown07XL">
-                                <li><a className="dropdown-item" href="#">Teclados</a></li>
-                                <li><a className="dropdown-item" href="#">Procesadores</a></li>
-                                <li><a className="dropdown-item" href="#">Impresoras</a></li>
+                                    <li>
+                                        <Link to="/categorias/1" className="dropdown-item" aria-current="page">
+                                            Teclados
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/categorias/2" className="dropdown-item" aria-current="page">
+                                            Mouse
+                                        </Link>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

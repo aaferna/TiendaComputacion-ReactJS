@@ -43,6 +43,8 @@ const ItemCount = (articulo) => {
             }
             >Agregar al Carrito</button>
 
+            
+
         </div>
         
     )
