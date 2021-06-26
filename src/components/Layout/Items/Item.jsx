@@ -11,17 +11,13 @@ const Item = ({item}) => {
                 <img src={item.img} alt="" className="card-img-topv3" width=""/>
                     <div className="card-body">
                         <p className="card-text"><strong>{item.nombre} - ${item.precio}</strong></p>
-                        <div className="d-flex justify-content-between align-items-center">
 
                             <ItemCount cantidad={item.disponible} productID={item.id} />
-
-                        </div>                        
-                            <div className="d-flex justify-content-between align-items-center">
-                                <Link to={`/articulo/${item.id}`} className="btn btn-warning" type="button" id="button-addon2">
+                            <div className="col-md-12 text-center">
+                                <Link to={`/articulo/${item.id}`}  className="btn btn-warning" type="button">
                                     Ver Articulo
                                 </Link>
                             </div>
-
                     </div>
             </div>
         </div>
