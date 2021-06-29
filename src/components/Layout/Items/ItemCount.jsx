@@ -1,18 +1,17 @@
-import React, {useState} from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from "react-router-dom";
+import CartState from '../../Contextos/CartContextInit';
 
 const ItemCount = (articulo) => {
+    const { addItem } = useContext(CartState);
     const [cant, setCant] = useState(0);
     const [divShow, divShowSet] = useState('block')
     const [divShowart, divShowartSet] = useState('none')
-    const [artSelect, artSelected] = useState(0)
-    const onAdd = cant => {
+    const onAdd = (id, cant, nom) => {
         if (cant > 0){
             divShowSet('none')
             divShowartSet('block')
-            artSelected(cant)
-            
-
+            addItem({ id: id, name: nom, cant: cant })
         } 
     }
     return (
@@ -52,7 +51,7 @@ const ItemCount = (articulo) => {
                     () => {
                         
                         if (cant > 0){
-                            onAdd(cant)
+                            onAdd(articulo.productID, cant, articulo.nombre)
                         } else {
                             alert('Seleccione la cantidad que desee')
                         }
