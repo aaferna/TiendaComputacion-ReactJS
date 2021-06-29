@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 
+import CartContext from './components/Contextos/CartContext'
 
 import NavBar from './components/Layout/NavBar/NavBar'
 import Index from './components/Layout/Index/Index'
@@ -14,6 +15,7 @@ import ItemDetailContainer from './components/Layout/Items/ItemDetailContainer';
 function App() {
   return (
     <div>
+      <CartContext>
       <Router>
         <NavBar />  
         <Switch>
@@ -28,7 +30,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
+      </CartContext>
     </div>
   );
 }
