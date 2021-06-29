@@ -5,11 +5,13 @@ const ItemCount = (articulo) => {
     const [cant, setCant] = useState(0);
     const [divShow, divShowSet] = useState('block')
     const [divShowart, divShowartSet] = useState('none')
+    const [artSelect, artSelected] = useState(0)
     const onAdd = cant => {
         if (cant > 0){
             divShowSet('none')
             divShowartSet('block')
-            // alert('Articulo agregado al Carrito')
+            artSelected(cant)
+            
 
         } 
     }
