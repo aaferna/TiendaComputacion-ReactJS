@@ -10,6 +10,10 @@ export default function CartState({ original = [], children }) {
 
       return cache.find(x => x.id === id);
     }
+
+    function getCache() {
+          return cache;
+    }
   
     function isInCart({ id }) {
         console.log(id);
@@ -27,7 +31,7 @@ export default function CartState({ original = [], children }) {
       console.log('Articulo agregado!');
     }
     return (
-      <CartContext.Provider value={{ cache, addItem, isInCart, cacheSize: cache.length }} >
+      <CartContext.Provider value={{ cache, addItem, isInCart, getCache, cacheSize: cache.length }} >
         { children }
       </CartContext.Provider>
     );

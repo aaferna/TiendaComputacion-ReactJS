@@ -11,6 +11,7 @@ import NavBar from './components/Layout/NavBar/NavBar'
 import Index from './components/Layout/Index/Index'
 import Categorias from './components/Layout/Categorias/Categorias'
 import ItemDetailContainer from './components/Layout/Items/ItemDetailContainer';
+import Carting from './components/Layout/Cart/Carting';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/articulo/:id">
             <ItemDetailContainer />
+          </Route>
+          <Route path="/cart">
+            <Carting />
           </Route>
         </Switch>
       </Router>

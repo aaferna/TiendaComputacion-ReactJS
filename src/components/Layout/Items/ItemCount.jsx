@@ -7,11 +7,12 @@ const ItemCount = (articulo) => {
     const [cant, setCant] = useState(0);
     const [divShow, divShowSet] = useState('block')
     const [divShowart, divShowartSet] = useState('none')
-    const onAdd = (id, cant, nom) => {
+    const onAdd = (id, cant, nom, precio) => {
+
         if (cant > 0){
             divShowSet('none')
             divShowartSet('block')
-            addItem({ id: id, name: nom, cant: cant })
+            addItem({ id: id, name: nom, cant: cant, precio: precio })
         } 
     }
     return (
@@ -51,7 +52,7 @@ const ItemCount = (articulo) => {
                     () => {
                         
                         if (cant > 0){
-                            onAdd(articulo.productID, cant, articulo.nombre)
+                            onAdd(articulo.productID, cant, articulo.nombre, articulo.costo)
                         } else {
                             alert('Seleccione la cantidad que desee')
                         }
