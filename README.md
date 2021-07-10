@@ -17,7 +17,7 @@
 
 # Ejecutar
 
-    Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
+Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
 
     - Ejecute este proyecto con npm start
 
