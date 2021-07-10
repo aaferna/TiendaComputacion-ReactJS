@@ -23,6 +23,10 @@ Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
 
 - Ejecute este proyecto con `npm start`
 
+## Backend
+
+Dispone de un Backend para la insersion de Articulos, disponible en /backend/insertItem
+
 
 # Adicionales
 
