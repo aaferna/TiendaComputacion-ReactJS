@@ -19,7 +19,7 @@
 
 Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
 
-    - Ejecute este proyecto con npm start
+- Ejecute este proyecto con `npm start`
 
 
 # Adicionales
