@@ -19,6 +19,8 @@
 
 Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
 
+- Instale las dependencias con `npm i`
+
 - Ejecute este proyecto con `npm start`
 
 
