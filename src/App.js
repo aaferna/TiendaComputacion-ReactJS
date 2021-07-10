@@ -21,19 +21,19 @@ function App() {
       <Router>
         <NavBar />  
         <Switch>
-          <Route path="/" exact>
+          <Route path="./" exact>
             <Index />
           </Route>
-          <Route path="/categorias/:id">
+          <Route path="./categorias/:id">
             <Categorias />
           </Route>
-          <Route path="/articulo/:id">
+          <Route path="./articulo/:id">
             <ItemDetailContainer />
           </Route>
-          <Route path="/cart">
+          <Route path="./cart">
             <Carting />
           </Route>
-          <Route path="/backend/insertItem">
+          <Route path="./backend/insertItem">
             <BackEndInsert />
           </Route>
         </Switch>
