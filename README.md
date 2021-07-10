@@ -25,9 +25,12 @@ Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
 # Adicionales
 
 > Se incluyo Bootstrap 5.0 como factor de forma del sitio
+
 > Se incluyo Firebase como Base de Datos del Proyecto
 
-
+<br>
+<br>
+<br>
 <p align="center">
     <img src="https://img.shields.io/github/downloads/gusgeek/TiendaComputacion-ReactJS/total">  
     <img src="https://img.shields.io/github/v/release/gusgeek/TiendaComputacion-ReactJS">  
