@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react'
 import CartState from '../../Contextos/CartContextInit';
 import { Link } from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Carting = () => {
-    const { getCache } = useContext(CartState);
-
+    const { getCache, delItemCache, cleanCart } = useContext(CartState);
     let r = getCache()
     return (
 
@@ -28,6 +28,7 @@ const Carting = () => {
                                 <th scope="col">Articulo</th>
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Precio</th>
+                                <th scope="col">Utilidad</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,18 +37,27 @@ const Carting = () => {
                                 <tr>
                                     <td>{s.id}</td>
                                     <td>
-                                        <Link to={`/articulo/${s.id}`} className="nav-link active" aria-current="page">
+                                        <Link to={`/articulo/${s.id}`} aria-current="page">
                                             {s.name}
                                         </Link>
                                     </td>
                                     <td>{s.cant}</td>
                                     <td>${s.cant * s.precio}</td>
+                                    <td><i className="bi-trash" style={{ fontSize: 15, color: 'black' }}  
+                                    onClick={
+                                        () => {
+                                            delItemCache(s.id)
+                                        }
+                                    }></i></td>
                                 </tr>
                             ))}
                                 
-                                
                             </tbody>
                             </table>
+
+                            <center>
+                                <button className="btn btn-danger" onClick={() => { cleanCart() } }>Vaciar Carrito</button>
+                            </center>
                         </div>
                     </div>
                     <div className="row" style={{display: `${ r.length === 0 ? 'block' : 'none' }`}}>
