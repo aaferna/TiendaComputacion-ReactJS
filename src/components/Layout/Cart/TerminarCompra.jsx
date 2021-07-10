@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import  { getFirestore } from "../../Firebase/core"
+import CartState from '../../Contextos/CartContextInit';
 
-const TerminarCompra = (r) => {
+const TerminarCompra = () => {
+
+const { cleanCart, getCache } = useContext(CartState);
+
+let artr = getCache()
+
     const hoy = new Date();
     const today = hoy.toISOString();
     const db = getFirestore()
@@ -12,7 +18,7 @@ const TerminarCompra = (r) => {
         e.preventDefault()
 
         let total = 0
-        r.cart.map(itm => total = total + itm.cant*itm.precio )
+        artr.map(itm => total = total + itm.cant * itm.precio )
         
         const nItm = {
 
@@ -23,15 +29,19 @@ const TerminarCompra = (r) => {
                 telefono: e.target.form[3].value, 
 
             }, 
-            items: r.cart, 
+            items: artr, 
             date: today, 
             total: total
             
         }
-        console.log(nItm)
 
         items.add(nItm)
-        .then( ({id}) => idCompraSet(id) )
+        .then(({id}) => { 
+
+            cleanCart() 
+            idCompraSet(id)
+
+        })
         .catch( err => console.log(err))
 
     }
@@ -40,9 +50,9 @@ const TerminarCompra = (r) => {
     return (
         <div>
                       
-            <div className="album py-5 bg-light" >
+            <div className="album py-5 bg-light" style={{display: `${ artr.length === 0 ? 'none' : 'block' }`}}>
                 <div className="container" style={{display: `${ idCompra === 0 ? 'block' : 'none' }`}} >
-                <h1 className="fw-light" >Terminar mi Compra</h1>
+                <h1 className="fw-light" >Complete sus Datos</h1>
                     <br/>
                     <div className="row">
                         <div className="col-md-12">
@@ -81,6 +91,17 @@ const TerminarCompra = (r) => {
                            </center>
                         </h2>
                     </div>
+                </div>
+            </div>
+            <div style={{display: `${ artr.length === 0 ? 'block' : 'none' }`}}>
+                <div className="container" >
+                <section className="py-5 text-center container">
+                    <div className="row py-lg-5">
+                    <div className="col-lg-6 col-md-8 mx-auto">
+                        <h1 className="fw-light">No hay elementos para terminar su compra</h1>
+                    </div>
+                    </div>
+                </section>
                 </div>
             </div>
    
