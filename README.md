@@ -15,12 +15,11 @@
 <br>
 
 
-# Ejecutar
+## Ejecutar
 
 Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
 
 - Instale las dependencias con `npm i`
-
 - Ejecute este proyecto con `npm start`
 
 ## Backend
@@ -28,7 +27,7 @@ Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
 Dispone de un Backend para la insersion de Articulos, disponible en /backend/insertItem
 
 
-# Adicionales
+## Adicionales
 
 > Se incluyo Bootstrap 5.0 como factor de forma del sitio
 
