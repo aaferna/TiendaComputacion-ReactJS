@@ -24,8 +24,8 @@ Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
 
 # Adicionales
 
- > Se incluyo Bootstrap 5.0 como factor de forma del sitio
- > Se incluyo Firebase como Base de Datos del Proyecto
+> Se incluyo Bootstrap 5.0 como factor de forma del sitio
+> Se incluyo Firebase como Base de Datos del Proyecto
 
 
 <p align="center">
