@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import CartState from '../../Contextos/CartContextInit';
 import { Link } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import TerminarCompra from './TerminarCompra';
 
 const Carting = () => {
     const { getCache, delItemCache, cleanCart } = useContext(CartState);
@@ -54,10 +55,14 @@ const Carting = () => {
                                 
                             </tbody>
                             </table>
+                            <br/>
 
                             <center>
                                 <button className="btn btn-danger" onClick={() => { cleanCart() } }>Vaciar Carrito</button>
                             </center>
+                            <br/>
+                            
+                            <TerminarCompra cart={r} />
                         </div>
                     </div>
                     <div className="row" style={{display: `${ r.length === 0 ? 'block' : 'none' }`}}>
@@ -65,6 +70,8 @@ const Carting = () => {
                     </div>
                 </div>
             </div>
+
+            
         </div>
     )
 }

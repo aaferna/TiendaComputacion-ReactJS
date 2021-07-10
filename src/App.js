@@ -12,6 +12,7 @@ import Index from './components/Layout/Index/Index'
 import Categorias from './components/Layout/Categorias/Categorias'
 import ItemDetailContainer from './components/Layout/Items/ItemDetailContainer';
 import Carting from './components/Layout/Cart/Carting';
+import BackEndInsert from './components/Layout/Backend/InsertItm';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/cart">
             <Carting />
+          </Route>
+          <Route path="/backend/insertItem">
+            <BackEndInsert />
           </Route>
         </Switch>
       </Router>

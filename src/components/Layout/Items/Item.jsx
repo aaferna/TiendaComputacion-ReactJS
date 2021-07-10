@@ -8,7 +8,7 @@ const Item = ({item}) => {
     return (
         <div className="col d-flex align-items-stretch" key={item.id}>
             <div className="card shadow-sm">
-                <img src={item.img} alt="" className="card-img-topv3" width=""/>
+                <img src={item.img} alt="" className="card-img-topv3" width="" height ="90px;"/>
                     <div className="card-body">
                         <p className="card-text"><strong>{item.nombre} - ${item.precio}</strong></p>
 
