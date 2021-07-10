@@ -2,7 +2,7 @@
   "name": "react1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gusgeek.github.io/TiendaComputacion-ReactJS/",
+  "homepage": ".",
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.12.0",
