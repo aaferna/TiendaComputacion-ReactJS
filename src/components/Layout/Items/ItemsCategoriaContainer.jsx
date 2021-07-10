@@ -1,29 +1,44 @@
 import React, {useState, useEffect} from 'react'
 import ItemCategoriaList from './ItemCategoriaList'
-const Articulos = [
-  {cat: 1, nombre: 'Logitech G213', disponible: 5, precio: 100, id:'210', detail: "El teclado G213 para juegos está dotado de teclas Logitech G Mech-Dome ajustadas especialmente para ofrecer una respuesta táctil superior y un perfil de desempeño global similar al de un teclado mecánico. Las teclas Mech-Dome tienen una altura estándar, ofrecen un recorrido total de 4 mm, una fuerza de actuación de 50 g y un funcionamiento silencioso.", img:"http://localhost:3000/assets/img/g213.webp"},
-  {cat: 2, nombre: 'Logitech G502', disponible: 3, precio: 100, id:'220', detail: "G502 HERO dispone de un sensor óptico avanzado para máxima precisión de seguimiento, iluminación RGB personalizada, perfiles de juego personalizados, de 200 a 25.600 dpi y pesas reposicionables.", img:"http://localhost:3000/assets/img/g502.png"},
-]
+import  { getFirestore } from "../../Firebase/core"
 
 const Container = () => {
 
   const [divShow, divShowSet] = useState('block')
   const [artSet, setArt] = useState([])
 
-    useEffect( () => { const timer1 = setTimeout(() => {
 
-        const Load = new Promise((resolve) => {
-          resolve(Articulos);
-        });
-        
-        Load.then( returns => { setArt(returns) }).then(
-          divShowSet('none')
-        );
-      
-      } , 3000);
+  useEffect( () => {
+    const db = getFirestore()
+    const itemCollection = db.collection("items")
 
-      return () => { clearTimeout(timer1); };
-    }, [] );
+    itemCollection.get()
+    .then((querySnapshot) => {
+      console.log(querySnapshot)
+        if(querySnapshot.size === 0){
+            console.log('No hay resultados')
+        } else { 
+          setArt(
+            querySnapshot.docs.map(
+              doc => {
+                
+                let data = doc.data()
+                let newObj = Object.assign(data, {  id: doc.id });
+                return newObj
+              
+              }
+            )  
+          ) 
+        }
+    })
+    .catch( err => console.log (err))
+    .finally(() => { 
+      divShowSet('none') 
+    })
+
+  }, [] );
+
+
 
 
     return (
