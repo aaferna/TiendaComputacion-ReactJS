@@ -12,7 +12,7 @@ const Item = ({item}) => {
                     <div className="card-body">
                         <p className="card-text"><strong>{item.nombre} - ${item.precio}</strong></p>
 
-                            <ItemCount cantidad={item.disponible} productID={item.id} />
+                            <ItemCount cantidad={item.disponible} nombre={item.nombre} productID={item.id} costo={item.precio} />
                             <div className="col-md-12 text-center">
                                 <Link to={`/articulo/${item.id}`}  className="btn btn-warning" type="button">
                                     Ver Articulo

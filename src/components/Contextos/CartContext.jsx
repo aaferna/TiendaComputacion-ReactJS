@@ -6,11 +6,36 @@ export default function CartState({ original = [], children }) {
     const [cache, setCache] = useState(original);
   
     function getFromCache(id) {
-        console.log(id);
-
       return cache.find(x => x.id === id);
     }
-  
+
+    function getCache() {
+          return cache;
+    }
+
+    function delItemCache(elem) {
+
+      for( let i = 0; i < cache.length; i++){ 
+
+        function arrayRemove(arr, value) { 
+    
+            return arr.filter(function(ele){ 
+                return ele != value; 
+            });
+
+        }
+
+        if ( cache[i].id === elem) { 
+          let result = arrayRemove(cache,  cache[i]);
+            setCache(result)
+
+        }
+    
+      }
+
+      return true;
+    }
+
     function isInCart({ id }) {
         console.log(id);
 
@@ -26,8 +51,15 @@ export default function CartState({ original = [], children }) {
       setCache([...cache, obj]);
       console.log('Articulo agregado!');
     }
+
+    function cleanCart(elem) {
+
+      setCache([])
+      return true;
+
+    }
     return (
-      <CartContext.Provider value={{ cache, addItem, isInCart, cacheSize: cache.length }} >
+      <CartContext.Provider value={{ cache, addItem, isInCart, getCache, cleanCart, delItemCache, cacheSize: cache.length }} >
         { children }
       </CartContext.Provider>
     );
