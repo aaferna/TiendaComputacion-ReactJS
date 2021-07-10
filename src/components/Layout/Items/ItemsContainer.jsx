@@ -9,7 +9,6 @@ const Container = () => {
   const [artSet, setArt] = useState([])
 
 
-
     useEffect( () => {
       const db = getFirestore()
       const itemCollection = db.collection("items")
