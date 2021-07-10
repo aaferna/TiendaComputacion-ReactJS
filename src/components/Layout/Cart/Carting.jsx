@@ -13,16 +13,16 @@ const Carting = () => {
              <section className="py-5 text-center container">
             <div className="row py-lg-5">
               <div className="col-lg-6 col-md-8 mx-auto">
-                <h1 className="fw-light">Tu lista de Compras</h1>
+                <h1 className="fw-light">{ r.length === 0 ? 'Tu lista se encuentra vacia' : 'Tu lista de Compras' }</h1>
               </div>
             </div>
           </section>
           
-            <div className="album py-5 bg-light">
+            <div className="album py-5 bg-light" style={{display: `${ r.length === 0 ? 'none' : 'block' }`}}>
                 <div className="container">
                     <div className="row"  >
                         <div className="col-md-12">
-                            <div style={{display: `${ r.length === 0 ? 'none' : 'block' }`}} >
+                            <div>
                                 <table className="table">
                                     <thead>
                                         <tr>
@@ -68,17 +68,10 @@ const Carting = () => {
                                     
                                 </center>
                             </div>
-
-                            <div style={{display: `${ r.length === 0 ? 'block' : 'none' }`}}>
-                                <h4 className="fw-light">Tu lista se encuentra vacia</h4>
-                            </div>
-                            
                         </div>
                     </div>
-                    
                 </div>
             </div>
-            
         </div>
     )
 }
