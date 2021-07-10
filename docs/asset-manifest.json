@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "./static/css/main.d08d8f82.chunk.css",
-    "main.js": "./static/js/main.f17f2988.chunk.js",
-    "main.js.map": "./static/js/main.f17f2988.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.5c9003a4.js",
-    "runtime-main.js.map": "./static/js/runtime-main.5c9003a4.js.map",
-    "static/css/2.da2a6637.chunk.css": "./static/css/2.da2a6637.chunk.css",
-    "static/js/2.97c38f17.chunk.js": "./static/js/2.97c38f17.chunk.js",
-    "static/js/2.97c38f17.chunk.js.map": "./static/js/2.97c38f17.chunk.js.map",
-    "index.html": "./index.html",
-    "static/css/2.da2a6637.chunk.css.map": "./static/css/2.da2a6637.chunk.css.map",
-    "static/css/main.d08d8f82.chunk.css.map": "./static/css/main.d08d8f82.chunk.css.map",
-    "static/js/2.97c38f17.chunk.js.LICENSE.txt": "./static/js/2.97c38f17.chunk.js.LICENSE.txt",
-    "static/media/bootstrap-icons.css": "./static/media/bootstrap-icons.dfd0ea12.woff2"
+    "main.css": "/TiendaComputacion-ReactJS/static/css/main.d08d8f82.chunk.css",
+    "main.js": "/TiendaComputacion-ReactJS/static/js/main.f17f2988.chunk.js",
+    "main.js.map": "/TiendaComputacion-ReactJS/static/js/main.f17f2988.chunk.js.map",
+    "runtime-main.js": "/TiendaComputacion-ReactJS/static/js/runtime-main.c3a50299.js",
+    "runtime-main.js.map": "/TiendaComputacion-ReactJS/static/js/runtime-main.c3a50299.js.map",
+    "static/css/2.2cf4e7b0.chunk.css": "/TiendaComputacion-ReactJS/static/css/2.2cf4e7b0.chunk.css",
+    "static/js/2.ad7fc799.chunk.js": "/TiendaComputacion-ReactJS/static/js/2.ad7fc799.chunk.js",
+    "static/js/2.ad7fc799.chunk.js.map": "/TiendaComputacion-ReactJS/static/js/2.ad7fc799.chunk.js.map",
+    "index.html": "/TiendaComputacion-ReactJS/index.html",
+    "static/css/2.2cf4e7b0.chunk.css.map": "/TiendaComputacion-ReactJS/static/css/2.2cf4e7b0.chunk.css.map",
+    "static/css/main.d08d8f82.chunk.css.map": "/TiendaComputacion-ReactJS/static/css/main.d08d8f82.chunk.css.map",
+    "static/js/2.ad7fc799.chunk.js.LICENSE.txt": "/TiendaComputacion-ReactJS/static/js/2.ad7fc799.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-icons.css": "/TiendaComputacion-ReactJS/static/media/bootstrap-icons.dfd0ea12.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.5c9003a4.js",
-    "static/css/2.da2a6637.chunk.css",
-    "static/js/2.97c38f17.chunk.js",
+    "static/js/runtime-main.c3a50299.js",
+    "static/css/2.2cf4e7b0.chunk.css",
+    "static/js/2.ad7fc799.chunk.js",
     "static/css/main.d08d8f82.chunk.css",
     "static/js/main.f17f2988.chunk.js"
   ]
