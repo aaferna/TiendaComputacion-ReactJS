@@ -22,7 +22,6 @@ const Carting = () => {
             
         }
         let r = items.add(nItm)
-        console.log(r)
         return r
        
 

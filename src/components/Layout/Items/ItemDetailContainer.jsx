@@ -18,7 +18,6 @@ const ItemDetailContainer = () => {
         item.get()
         .then( doc => {
             if(!doc.exists) {
-                console.log('itemNoDisponible')
                 return;
             }
             setArt({id: doc.id, ...doc.data()})

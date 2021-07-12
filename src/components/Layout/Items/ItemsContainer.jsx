@@ -15,9 +15,7 @@ const Container = () => {
   
       itemCollection.get()
       .then((querySnapshot) => {
-        console.log(querySnapshot)
           if(querySnapshot.size === 0){
-              console.log('No hay resultados')
           } else { 
             setArt(
               querySnapshot.docs.map(
