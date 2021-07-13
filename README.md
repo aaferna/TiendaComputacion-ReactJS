@@ -20,9 +20,9 @@
 
 ## Ejecutar
 
-Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS
+Descargue este repositorio a su Equipo, recuerde tener instalado NodeJS y estar desde una terminal en el directorio que descomprimio el proyecto
 
-- Instale las dependencias con `npm i`
+- Instale las dependencias con `npm i` 
 - Ejecute este proyecto con `npm start`
 
 ## Backend
