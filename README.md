@@ -11,6 +11,9 @@
       <br>
       Es una pre-maqueta pensada para una futura migracion del diseño origial que se usa en metronica.com.ar con el eCommerce que tiene por API
     </strong>
+  <br> <br> <br>
+   <img width="800" src="https://github.com/gusgeek/TiendaComputacion-ReactJS/blob/main/demo.gif?raw=true">
+  <br>
   </p>
 <br>
 
